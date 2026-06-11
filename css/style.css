@@ -45,48 +45,88 @@ img {
     margin: auto;
 }
 
-/* HEADER */
-body{
-    padding-top: 70px;
-}
-.site-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    background: var(--background);
-    z-index: 1000;
+    padding:20px 60px;
 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background:#dce8f3;
 }
 
-.header-content {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-.logo img {
-    width: 230px;
+.logo img{
+    width: 200px;
+    height: auto;
 }
 
-.main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+nav{
+
+    display:flex;
+    gap:50px;
+
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.main-nav a {
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
-    transition: 0.3s;
+
+nav a{
+    text-decoration:none;
+    color:#111;
+
+    font-weight:600;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    transition:.3s;
 }
 
-.main-nav a:hover {
-    color: var(--accent);
+nav a:hover{
+
+    color:#173a6b;
+
+    transform:translateY(-2px);
+}
+
+
+/* LUPA */
+
+.acciones{
+
+    display:flex;
+    gap:15px;
+}
+
+.btn-busqueda{
+
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+.btn-busqueda:hover{
+
+    background:#173a6b;
+    color:white;
+
+    transform:scale(1.1);
 }
 
 /* HERO */
@@ -274,20 +314,19 @@ body{
 footer{
     background: #0f2747;
     color: white;
-    margin-top: 0;
+    margin-top: 80px;
 }
 
 .footer-container{
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
-    padding: 50px 40px;
+    padding: 50px 60px;
 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 50px;
+    gap: 120px;
 
-    flex-wrap: wrap;
 }
 
 .footer-logo{
@@ -353,6 +392,22 @@ footer{
 .footer-bottom p{
     font-size: 14px;
     color: #c9d5df;
+}
+
+.footer-brand{
+    width: 180px;
+    height: auto;
+}
+
+
+.footer-brand img{
+    width: 250px;
+    height:auto;
+    flex-shrink:0;
+}
+
+.footer-brand h2{
+    margin-bottom:10px;
 }
 
 /* RESPONSIVE */
