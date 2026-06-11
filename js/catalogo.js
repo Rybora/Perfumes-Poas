@@ -43,6 +43,12 @@ function mostrarPerfumes(lista) {
         </div>
         `;
     });
+
+    //ACTUALIZA EL CONTADOR DE PERFUMES
+    document.getElementById("cantidad-productos")
+        .textContent =
+        `Resultados: ${lista.length} perfumes`;
+
 }
 
 
@@ -75,4 +81,48 @@ function activarBoton(boton){
         .forEach(btn => btn.classList.remove("activo"));
 
     boton.classList.add("activo");
+}
+
+
+//FILTRAR ORDENAR POR
+document
+.getElementById("ordenar")
+.addEventListener("change", ordenarPerfumes);
+
+function ordenarPerfumes(){
+
+    const tipo =
+        document.getElementById("ordenar").value;
+
+    let copia = [...listaPerfumes];
+
+    switch(tipo){
+
+        case "precio-menor":
+
+            copia.sort(
+                (a,b) => a.precio - b.precio
+            );
+
+            break;
+
+        case "precio-mayor":
+
+            copia.sort(
+                (a,b) => b.precio - a.precio
+            );
+
+            break;
+
+        case "nombre":
+
+            copia.sort(
+                (a,b) =>
+                a.nombre.localeCompare(b.nombre)
+            );
+
+            break;
+    }
+
+    mostrarPerfumes(copia);
 }

@@ -72,6 +72,32 @@
         </section>
 
 
+        <!--FILTRO ORDNAR POR-->
+        <div class="catalogo-barra">
+            <span id="cantidad-productos">
+                Resultados: 10 perfumes
+            </span>
+
+            <select id="ordenar">
+                <option value="default">
+                    Ordenar por
+                </option>
+                <option value="precio-menor">
+                    Precio: menor a mayor
+                </option>
+                <option value="precio-mayor">
+                    Precio: mayor a menor
+                </option>
+                <option value="nombre">
+                    Nombre (A-Z)
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!--CATALOGO DE PERFUMES-->
         <section id="productos" class="productos">
             <!--ACA SE GENERAN LAS CARDS DE LOS PERFUMES-->
 
@@ -133,6 +159,14 @@
             <p>&copy; 2026 L'ESSENCE UNIQUE. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!--BOTON DE WHATSAPP-->
+    <a
+        href="https://wa.me/50612345678"
+        class="whatsapp-float"
+        target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <!--EJECUTA EL JS QUE CARGA EL CATALOGO-->
     <script src="js/catalogo.js"></script>
