@@ -68,7 +68,10 @@
                 Fragancias originales creadas para<br> momentos inolvidables.
             </p>
 
-            <button>Explorar Catálogo</button>
+            <a href="catalogo.html">
+                <button>Explorar Catálogo</button>
+            </a>
+            
         </div>
 
         <img src="img/fondo.png" alt="Fondo de un Perfume" class="imagen-fondo">
@@ -76,13 +79,26 @@
     </section>
 
     <section class="destacados">
+
         <h2>Perfumes Destacados</h2>
-        <ul>
-            <li>perfume 1</li>
-            <li>perfume 2</li>
-            <li>perfume 3</li>
-            <li>perfume 4</li>
-        </ul>
+        <div class="linea-destacados"></div>
+
+        <div class="slider-container">
+            <button class="slider-btn izquierda"
+                onclick="moverSlider(-1)">
+                ❮
+            </button>
+
+            <div id="perfumesDestacados" class="slider">
+                
+            </div>
+
+            <button class="slider-btn derecha"
+                onclick="moverSlider(1)">
+                ❯
+            </button>
+
+        </div>
 
     </section>
 
@@ -131,7 +147,7 @@
     </section>
 
 
-       <footer id = 'contacto'>
+    <footer id = 'contacto'>
         <div class="footer-container">
 
             <div class="footer-logo">
@@ -190,6 +206,7 @@
         target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+    <script src="js/index.js"></script>
 </body>
 
 

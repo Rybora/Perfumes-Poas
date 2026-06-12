@@ -62,14 +62,14 @@ header{
 }
 
 .logo img{
-    width: 200px;
+    width: 210px;
     height: auto;
 }
 
 nav{
 
     display:flex;
-    gap:50px;
+    gap:70px;
 
     margin-left:auto;
     margin-right:auto;
@@ -81,10 +81,13 @@ nav a{
     color:#111;
 
     font-weight:600;
+    font-size:18px;
 
     display:flex;
     align-items:center;
-    gap:8px;
+    gap:10px;
+
+    position:relative;
 
     transition:.3s;
 }
@@ -96,6 +99,12 @@ nav a:hover{
     transform:translateY(-2px);
 }
 
+
+nav a i{
+    transition:.3s;
+    font-size: 22px;
+    transition:.3s;
+}
 
 /* LUPA */
 
@@ -203,7 +212,7 @@ nav a:hover{
 
 .destacados h2 {
     color: var(--primary);
-    margin-bottom: 30px;
+    margin-bottom: 50px;  /* SEPARACION DE LAS TARJETAS */
     font-size: 2rem;
 }
 
@@ -300,6 +309,98 @@ nav a:hover{
 
 .card p {
     color: #dee8ff;
+}
+
+/* CAMBIAR ENTRE PERFUMES*/
+
+.slider-container{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+}
+
+.slider{
+    padding-top: 10px;
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    flex:1;
+
+}
+
+.slider::-webkit-scrollbar{
+    display:none;
+}
+
+.linea-destacados{
+
+    width:220px;
+    height:4px;
+
+    background:#0f2d5c;
+
+    margin:15px auto 50px;
+
+    border-radius:20px;
+}
+
+/* TARJETAS DE LOS PERFUMES */
+.card-destacado{
+
+    min-width:280px;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card-destacado img{
+
+    width:100%;
+    height:220px;
+    object-fit:contain;
+
+}
+
+.card-destacado h3{
+
+    margin-top:15px;
+    color:#0f2d5c;
+
+}
+
+.card-destacado:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+
+/* FLECHAS DE LAS TARJETAS */
+.slider-btn{
+
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#0f2d5c;
+    color:white;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+.slider-btn:hover{
+
+    transform:scale(1.1);
+    background:#173a6b;
+    
 }
 
 /* IMAGEN INFERIOR */

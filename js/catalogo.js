@@ -1,6 +1,9 @@
 //VARIABLE LOCAL PARA PERFUMES
 let listaPerfumes = [];
+let listaActual = [];
 
+let generoActual = "Todos";
+let ordenActual = "default";
 
 //CARGA EL JSON
 async function cargarPerfumes() {
@@ -9,11 +12,10 @@ async function cargarPerfumes() {
 
     listaPerfumes = await respuesta.json();
 
+    listaActual = [...listaPerfumes];
+
     mostrarPerfumes(listaPerfumes);
 }
-
-
-
 
 
 //PARA MOSTRAR DINAMICAMENTE CADA PERFUME
@@ -55,19 +57,10 @@ function mostrarPerfumes(lista) {
 //PARA FILTRAR POR CATEGORIA
 function filtrar(genero) {
 
-    if (genero === "Todos") {
+    generoActual = genero;
+    actualizarCatalogo();
 
-        mostrarPerfumes(listaPerfumes);
-        return;
-    }
-
-    const filtrados = listaPerfumes.filter(
-        perfume => perfume.genero === genero
-    );
-
-    mostrarPerfumes(filtrados);
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -75,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+//ACTIVA LA ANIMACION DE LOS BOTONES
 function activarBoton(boton){
 
     document.querySelectorAll(".filtros button")
@@ -91,16 +86,34 @@ document
 
 function ordenarPerfumes(){
 
-    const tipo =
+    ordenActual =
         document.getElementById("ordenar").value;
 
-    let copia = [...listaPerfumes];
+    actualizarCatalogo();
 
-    switch(tipo){
+}
+
+//ACTUALIZA EL CATALOGO EN TODAS LAS COMBINACIONES
+function actualizarCatalogo() {
+
+    let resultado = [...listaPerfumes];
+
+    // FILTRO DE GENERO
+
+    if (generoActual !== "Todos") {
+
+        resultado = resultado.filter(
+            perfume => perfume.genero === generoActual
+        );
+    }
+
+    // ORDENAMIENTO
+
+    switch (ordenActual) {
 
         case "precio-menor":
 
-            copia.sort(
+            resultado.sort(
                 (a,b) => a.precio - b.precio
             );
 
@@ -108,7 +121,7 @@ function ordenarPerfumes(){
 
         case "precio-mayor":
 
-            copia.sort(
+            resultado.sort(
                 (a,b) => b.precio - a.precio
             );
 
@@ -116,7 +129,7 @@ function ordenarPerfumes(){
 
         case "nombre":
 
-            copia.sort(
+            resultado.sort(
                 (a,b) =>
                 a.nombre.localeCompare(b.nombre)
             );
@@ -124,5 +137,7 @@ function ordenarPerfumes(){
             break;
     }
 
-    mostrarPerfumes(copia);
+    listaActual = resultado;
+
+    mostrarPerfumes(listaActual);
 }
