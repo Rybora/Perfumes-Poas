@@ -1,0 +1,366 @@
+/* VARIABLES */
+
+:root {
+    --text: #111111;
+    --background: #c8e4ff;
+    --primary: #060026;
+    --secondary: #1b3fa0;
+    --accent: #3b82f6;
+    --white: #ffffff;
+}
+/*Lupa*/
+
+.acciones{
+
+    display:flex;
+    gap:15px;
+}
+
+.btn-busqueda{
+
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+.btn-busqueda:hover{
+
+    background:#173a6b;
+    color:white;
+
+    transform:scale(1.1);
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Para todo el texto general, descripciones, precios y botones */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    /* Un grosor ligero para que se vea fino y elegante */
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Para los títulos grandes y nombres de los perfumes (L'ESSENCE UNIQUE, CATÁLOGO, etc.) */
+h1,
+h2,
+h3,
+.logo,
+.nav-links a {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* El diseño usa casi todo en mayúsculas */
+    letter-spacing: 1px;
+    /* Un pequeño espacio entre letras para mayor elegancia */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: #0931581c;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.199);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+nav {
+
+    display: flex;
+    gap: 50px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: .3s;
+}
+
+nav a:hover {
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+/*Registro*/
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+main h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+.login-container {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    padding: 12px;
+    color: #ffffff;
+}
+
+.input-box input{
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+
+    background-color: transparent;
+    color: white;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 20px;
+    color: #00aeff;
+}
+
+.login-link{
+    color: #00aeff;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #a3ccff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ffffff6b;
+    border-radius: 10px;
+    background: #0931581c;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #0f2747;
+    color: white;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 50px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 120px;
+
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.footer-logo p {
+    color: #d8e3ee;
+    line-height: 1.6;
+}
+
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-contact h3,
+.footer-links h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-contact address {
+    font-style: normal;
+    line-height: 1.8;
+    color: #d8e3ee;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: #d8e3ee;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .15);
+
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #c9d5df;
+}
+
+.footer-brand {
+    width: 180px;
+    height: auto;
+}
+
+
+.footer-brand img {
+    width: 250px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.footer-brand h2 {
+    margin-bottom: 10px;
+}
+
+.bg-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container form{
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: #0735634b;
+    border-radius: 15px;
+    box-shadow: 1 10px 25px rgba(0,0,0,0.3);
+}

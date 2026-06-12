@@ -1,3 +1,19 @@
+:root {
+    --text: #111111;
+    --background: #c8e4ff;
+    --primary: #060026;
+    --secondary: #1b3fa0;
+    --accent: #3b82f6;
+    --white: #ffffff;
+}
+/*Lupa*/
+
+.acciones{
+
+    display:flex;
+    gap:15px;
+}
+
 *{
     margin:0;
     padding:0;

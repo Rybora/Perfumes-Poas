@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
         content="L'Essence Unique es una pagina de ventas de perfumes originales con envio a todo Costa Rica.">
     <meta name="keywords"
-        content="Perfumes, Costa Rica, Colonia, Essence, Perfumes Costa Rica, Comprar, Comprar Perfume">
+        content="Perfumes, Costa Rica, Colonia, Essence, Perfumes Costa Rica, Comprar, Comprar Perfume, Fragancia">
     <meta name="author" content="L'Essence Unique">
-        <link rel="icon" type="image/png" href="img/LogoCuadrado.png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/LogoCuadrado.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styleLogin.css">
 
-
-    <link rel="stylesheet" href="css/styleInicio.css">
-    <title>L'Essence Unique | Inicio</title>
+    <title>L'Essence Unique | Inicio Sesion</title>
 </head>
 
 <body>
+
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="img/logo.png" alt="L'Essence Unique">
+                <img src="img/logo2.png" alt="L'Essence Unique">
             </a>
         </div>
 
@@ -58,80 +56,60 @@
 
     </header>
 
-    <section class="hero">
+    <main>
 
-        <div class="hero-text">
-            <h1>LA ESENCIA<br>DE TU HISTORIA</h1>
+        <img src="img/login.png" alt="Fondo" class="bg-image">
+        <h1>INICIAR SESION</h1>
 
-            <p>
+        <section class = "container">
+            <form action="">
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <div class="input-box">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email"
+                            placeholder="Ingresa tu correo electrónico"
+                            required>
+                    </div>
+                </div>
 
-                Fragancias originales creadas para<br> momentos inolvidables.
-            </p>
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password"
+                            placeholder="Ingresa tu contraseña"
+                            required>
+                    </div>
+                </div>
 
-            <button>Explorar Catálogo</button>
-        </div>
+                <a href="#" class="forgot-password">
+                    ¿Olvidaste tu contraseña?
+                </a>
 
-        <img src="img/fondo.png" alt="Fondo de un Perfume" class="imagen-fondo">
+                <button type="submit" class="btn-login">
+                    Iniciar Sesión
+                </button>
 
-    </section>
+                <div class="separator">
+                    <span>o</span>
+                </div>
 
-    <section class="destacados">
-        <h2>Perfumes Destacados</h2>
-        <ul>
-            <li>perfume 1</li>
-            <li>perfume 2</li>
-            <li>perfume 3</li>
-            <li>perfume 4</li>
-        </ul>
+                <button type="button" class="btn-google">
+                    <i class="fa-brands fa-google"></i>
+                    Continuar con Google
+                </button>
 
-    </section>
+                <p class="register-link">
+                    ¿No tienes una cuenta?
+                    <a href="Register.html" class="link-registro">Regístrate aquí</a>
+                </p>
+            </form>
+        </section>
 
-    <section class="beneficios">
+    </main>
 
-        <h1>Sobre Nosotros</h1>
-
-        <div class="card">
-            <div class="icono">
-
-                <img src="img/logo2.png" alt="">
-            </div>
-            <h3>Fragancias Exclusivas</h3>
-            <p>Aromas únicos para cada personalidad.</p>
-        </div>
-
-        <div class="card">
-            <div class="icono">
-
-                <img src="img/logo2.png" alt="">
-            </div>
-            <h3>Calidad Premium</h3>
-            <p>Perfumes originales y de alta calidad.</p>
-        </div>
-
-        <div class="card">
-            <div class="icono">
-                <img src="img/logo2.png" alt="">
-            </div>
-            <h3>Regalos Perfectos</h3>
-            <p>Encuentra el detalle ideal para cualquier ocasión.</p>
-        </div>
-
-        <div class="card">
-            <div class="icono">
-
-                <img src="img/logo2.png" alt="">
-            </div>
-            <h3>Experiencia Única</h3>
-            <p>Más que perfumes, momentos inolvidables.</p>
-        </div>
-
-
-        <img src="img/fondo_2.png" alt="Fondo de la pagina 2" class="fondo-beneficios">
-
-    </section>
-
-
-       <footer id = 'contacto'>
+    <footer id='contacto'>
         <div class="footer-container">
 
             <div class="footer-logo">
@@ -183,14 +161,6 @@
             <p>&copy; 2026 L'ESSENCE UNIQUE. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <!--BOTON DE WHATSAPP-->
-    <a
-        href="https://wa.me/50612345678"
-        class="whatsapp-float"
-        target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
 </body>
 
-
-</html>>
+</html>

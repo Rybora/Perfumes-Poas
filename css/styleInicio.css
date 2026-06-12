@@ -314,7 +314,7 @@ nav a:hover{
 footer{
     background: #0f2747;
     color: white;
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 .footer-container{
@@ -448,3 +448,44 @@ footer{
     }
 }
 
+/*
+    BOTON DE WHATSAPP
+*/
+
+.whatsapp-float{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:32px;
+    text-decoration:none;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:999;
+    transition:.3s;
+
+    animation:pulse 2s infinite;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(37,211,102,.7);
+    }
+    70%{
+        box-shadow:0 0 0 15px rgba(37,211,102,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,17 +11,16 @@
     <meta name="author" content="L'Essence Unique">
     <link rel="icon" type="image/png" href="img/LogoCuadrado.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/styleCatalogo.css">
+    <link rel="stylesheet" href="css/styleRegister.css">
 
-    <title>L'Essence Unique | Catalogo</title>
+    <title>L'Essence Unique | Registrarse</title>
 </head>
-
 
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="img/logo.png" alt="L'Essence Unique">
+                <img src="img/logo2.png" alt="L'Essence Unique">
             </a>
         </div>
 
@@ -56,56 +55,79 @@
 
     </header>
 
-
-
     <main>
-        <section class="titulo">
-            <h1>CATÁLOGO</h1>
+
+        <img src="img/login.png" alt="Fondo" class="bg-image">
+        <h1>REGISTRARSE</h1>
+
+        <section class="container">
+            <form action="">
+
+                <div class="input-group">
+                    <label>Nombre Completo</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Ingresa tu Nombre Completo" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Numero De Telefono</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-phone"></i> 
+                        <input type="tel" placeholder="Ingresa tu Numero De Telefono" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <div class="input-box">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Confirmar Contraseña</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Confirma tu contraseña" required>
+                    </div>
+                </div>
+
+                <a href="#" class="forgot-password">
+                    ¿Olvidaste tu contraseña?
+                </a>
+
+                <button type="submit" class="btn-login">
+                    Registrarse
+                </button>
+
+                <div class="separator">
+                    <span>o</span>
+                </div>
+
+                <button type="button" class="btn-google">
+                    <i class="fa-brands fa-google"></i>
+                    Continuar con Google
+                </button>
+
+                <p class="register-link">
+                    ¿Ya tienes una cuenta?
+                    <a href="login.html" class="login-link">Inicia Sesion aquí</a>
+                </p>
+            </form>
         </section>
-
-        <section class="filtros">
-            <button onclick="filtrar('Todos'); activarBoton(this)" class="activo">Todos</button>
-            <button onclick="filtrar('Femenino'); activarBoton(this)">Femeninos</button>
-            <button onclick="filtrar('Masculino'); activarBoton(this)">Masculinos</button>
-            <button onclick="filtrar('Unisex'); activarBoton(this)">Unisex</button>
-            <button onclick="filtrar('Nuevo'); activarBoton(this)">Nuevos</button>
-        </section>
-
-
-        <!--FILTRO ORDNAR POR-->
-        <div class="catalogo-barra">
-            <span id="cantidad-productos">
-                Resultados: 10 perfumes
-            </span>
-
-            <select id="ordenar">
-                <option value="default">
-                    Ordenar por
-                </option>
-                <option value="precio-menor">
-                    Precio: menor a mayor
-                </option>
-                <option value="precio-mayor">
-                    Precio: mayor a menor
-                </option>
-                <option value="nombre">
-                    Nombre (A-Z)
-                </option>
-
-            </select>
-
-        </div>
-
-
-        <!--CATALOGO DE PERFUMES-->
-        <section id="productos" class="productos">
-            <!--ACA SE GENERAN LAS CARDS DE LOS PERFUMES-->
-
-        </section>
-
 
     </main>
-
 
     <footer id='contacto'>
         <div class="footer-container">
@@ -159,17 +181,6 @@
             <p>&copy; 2026 L'ESSENCE UNIQUE. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <!--BOTON DE WHATSAPP-->
-    <a
-        href="https://wa.me/50612345678"
-        class="whatsapp-float"
-        target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!--EJECUTA EL JS QUE CARGA EL CATALOGO-->
-    <script src="js/catalogo.js"></script>
 </body>
 
 </html>
