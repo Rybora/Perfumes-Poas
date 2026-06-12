@@ -28,7 +28,7 @@
         </div>
 
         <nav>
-            <a href="index.html">
+            <a href="index.html" class="activo-menu">
                 <i class="fa-solid fa-house"></i>
                 Inicio
             </a>
@@ -46,9 +46,14 @@
             </a>
         </nav>
         <div class="acciones">
-            <button class="btn-busqueda">
+            <div class="busqueda-expandible">
+
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+                <input
+                    type="text"
+                    placeholder="Search here..."
+                >
+            </div>
 
             <button class="btn-busqueda">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -201,9 +206,10 @@
     </footer>
     <!--BOTON DE WHATSAPP-->
     <a
-        href="https://wa.me/50612345678"
+        href="https://api.whatsapp.com/send?phone=50612345678&text=Hola.%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20personalizada%20para%20elegir%20una%20fragancia."
         class="whatsapp-float"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
     <script src="js/index.js"></script>

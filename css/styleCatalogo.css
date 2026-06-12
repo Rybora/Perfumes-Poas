@@ -160,7 +160,7 @@ nav a::before{
 }
 
 
-/* LUPA */
+/* LUPA Y CARRITO*/
 
 .acciones{
 
@@ -170,8 +170,8 @@ nav a::before{
 
 .btn-busqueda{
 
-    width:42px;
-    height:42px;
+    width:45px;
+    height:45px;
 
     border:none;
     border-radius:50%;
@@ -183,7 +183,6 @@ nav a::before{
     transition:.3s;
 }
 
-
 .btn-busqueda:hover{
 
     background:#173a6b;
@@ -191,6 +190,70 @@ nav a::before{
 
     transform:scale(1.1);
 }
+
+/* PARA QUE EL BOTON SE EXPANDA*/
+
+.busqueda-expandible{
+
+    display:flex;
+    align-items:center;
+
+    width:45px;
+    height:45px;
+
+    background:white;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    transition:all .4s ease;
+
+    cursor:pointer;
+}
+
+.busqueda-expandible i{
+
+    min-width:45px;
+
+    text-align:center;
+
+    color:#173a6b;
+
+    font-size:16px;
+}
+
+.busqueda-expandible input{
+
+    border:none;
+
+    outline:none;
+
+    width:0;
+
+    background:transparent;
+
+    font-size:15px;
+
+    padding-right:15px;
+
+    transition:.4s ease;
+}
+
+
+.busqueda-expandible:hover input{
+
+    width:160px;
+}
+
+.busqueda-expandible:hover,
+.busqueda-expandible:focus-within{
+
+    width:220px;
+
+    box-shadow:0 5px 15px rgba(15,45,92,.15);
+}
+
 
 /* TITULO */
 
