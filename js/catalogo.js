@@ -30,18 +30,39 @@ function mostrarPerfumes(lista) {
         contenedor.innerHTML += `
         <div class="card">
 
-            <img src="${perfume.imagen}">
 
-            <h3>${perfume.nombre}</h3>
+            <a href="detalle.html?id=${perfume.id}" class="card-link">
+                <img src="${perfume.imagen}" alt="${perfume.nombre}">
 
-            <p>${perfume.genero}</p>
+                <div class="card-info">
+                    <h3>${perfume.nombre}</h3>
+                    <p class="card-tipo">${perfume.tipo}</p>
+                </div>
+            </a>
 
-            <p>${perfume.tipo}</p>
+            <div class="card-extra">
 
-            <p>${perfume.tamano} ml</p>
+                <p>${perfume.genero}</p>
 
-            <strong>₡${perfume.precio}</strong>
+                <div class="tamanos">
+                    ${perfume.tamanos.map(t => `<span>${t} ml</span>`).join("")}
+                </div>
 
+                <div class="card-bottom">
+
+                    <p class="precio">₡${perfume.precio}</p>
+
+                    <button class="add-to-cart" type="button">
+                        <span class="btn-label">Add to cart</span>
+
+                        <span class="cart-wrap">
+                            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                            <span class="item-drop"></span>
+                                <i class="fa-solid fa-check check-icon"></i>
+                            </span>
+                    </button>
+                </div>
+            </div>
         </div>
         `;
     });
@@ -141,3 +162,18 @@ function actualizarCatalogo() {
 
     mostrarPerfumes(listaActual);
 }
+
+
+//ANIMACION PARA BOTON DEL CARRITO
+document.addEventListener("click", function(e){
+
+    const boton = e.target.closest(".add-to-cart");
+
+    if(!boton) return;
+
+    boton.classList.add("animar");
+
+    setTimeout(() => {
+        boton.classList.remove("animar");
+    }, 1800);
+});

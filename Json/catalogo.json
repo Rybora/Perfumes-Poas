@@ -8,7 +8,7 @@
         "genero": "Masculino",
         "familia": "Amaderada",
         "tipo": "Eau de Parfum",
-        "tamano": 100,
+        "tamanos": [75, 125, 200],
         "imagen": "img/perfume.png",
         "descripcion": "Fragancia elegante y sofisticada.",
         "destacado": true
@@ -22,7 +22,7 @@
         "genero": "Femenino",
         "familia": "Floral",
         "tipo": "Eau de Toilette",
-        "tamano": 75,
+        "tamanos": [75, 125, 200],
         "imagen": "img/perfume.png",
         "descripcion": "Notas florales suaves y delicadas.",
         "destacado": true
@@ -36,7 +36,7 @@
         "genero": "Unisex",
         "familia": "Cítrica",
         "tipo": "Eau de Parfum",
-        "tamano": 100,
+        "tamanos": [75, 125, 200],
         "imagen": "img/perfume.png",
         "descripcion": "Frescura inspirada en el océano.",
         "destacado": false
@@ -50,7 +50,7 @@
         "genero": "Masculino",
         "familia": "Oriental",
         "tipo": "Parfum",
-        "tamano": 100,
+        "tamanos": [75, 125],
         "imagen": "img/perfume.png",
         "descripcion": "Aroma profundo y misterioso.",
         "destacado": true
@@ -64,7 +64,7 @@
         "genero": "Femenino",
         "familia": "Frutal",
         "tipo": "Eau de Parfum",
-        "tamano": 90,
+        "tamanos": [75, 125, 200],
         "imagen": "img/perfume.png",
         "descripcion": "Dulce y vibrante.",
         "destacado": false
@@ -78,7 +78,7 @@
         "genero": "Masculino",
         "familia": "Aromática",
         "tipo": "Eau de Toilette",
-        "tamano": 100,
+        "tamanos": [75, 125, 200],
         "imagen": "img/perfume.png",
         "descripcion": "Fresco y dinámico.",
         "destacado": false
@@ -92,7 +92,7 @@
         "genero": "Femenino",
         "familia": "Oriental",
         "tipo": "Parfum",
-        "tamano": 50,
+        "tamanos": [75, 200],
         "imagen": "img/perfume.png",
         "descripcion": "Intenso y elegante.",
         "destacado": true
@@ -106,7 +106,7 @@
         "genero": "Unisex",
         "familia": "Cítrica",
         "tipo": "Eau de Toilette",
-        "tamano": 100,
+        "tamanos": [75],
         "imagen": "img/perfume.png",
         "descripcion": "Explosión de frescura tropical.",
         "destacado": false
@@ -120,7 +120,7 @@
         "genero": "Masculino",
         "familia": "Amaderada",
         "tipo": "Parfum",
-        "tamano": 100,
+        "tamanos": [75, 125, 200],
         "imagen": "img/perfume.png",
         "descripcion": "Aroma exótico y lujoso.",
         "destacado": true
@@ -134,7 +134,7 @@
         "genero": "Unisex",
         "familia": "Floral",
         "tipo": "Eau de Parfum",
-        "tamano": 80,
+        "tamanos": [200],
         "imagen": "img/perfume.png",
         "descripcion": "Equilibrio perfecto entre suavidad y frescura.",
         "destacado": false
