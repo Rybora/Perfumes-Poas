@@ -102,7 +102,6 @@ header {
 nav {
 
     display: flex;
-    gap: 70px;
 
     margin-left: auto;
     margin-right: auto;
@@ -443,4 +442,177 @@ footer {
     background-color: #0735634b;
     border-radius: 15px;
     box-shadow: 1 10px 25px rgba(0,0,0,0.3);
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width:1024px){
+
+    header{
+        padding:20px 30px;
+    }
+
+    nav{
+        gap:25px;
+    }
+
+    .footer-container{
+        gap:60px;
+    }
+}
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width:768px){
+
+    html,
+    body{
+        overflow-x:hidden;
+    }
+
+    /* HEADER */
+
+    header{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+    }
+
+    .logo img{
+        width:160px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+        margin:0;
+    }
+
+    nav a{
+        font-size:14px;
+        gap:5px;
+    }
+
+    nav a i{
+        font-size:16px;
+    }
+
+    .acciones{
+        width:100%;
+        justify-content:center;
+    }
+
+    /* TITULO */
+
+    main h1{
+        font-size:2rem;
+        text-align:center;
+    }
+
+    /* FORMULARIO */
+
+    .container{
+        padding:0 15px;
+    }
+
+    .container form{
+        width:100%;
+        max-width:100%;
+        padding:25px;
+    }
+
+    .input-box{
+        padding:10px;
+    }
+
+    .input-box input{
+        font-size:14px;
+    }
+
+    .btn-login,
+    .btn-google{
+        padding:14px;
+    }
+
+    /* FOOTER */
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+        padding:40px 20px;
+    }
+
+    .footer-brand{
+        width:100%;
+    }
+
+    .footer-brand img{
+        width:180px;
+        margin:auto;
+    }
+
+    .footer-links{
+        align-items:center;
+    }
+
+    .footer-contact h3,
+    .footer-links h3{
+        margin-top:0;
+    }
+}
+
+/* =====================================
+   TELEFONOS PEQUEÑOS
+===================================== */
+
+@media (max-width:480px){
+
+    .logo img{
+        width:140px;
+    }
+
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    main{
+        padding:20px 10px;
+    }
+
+    main h1{
+        font-size:1.6rem;
+    }
+
+    .container form{
+        padding:20px;
+        border-radius:12px;
+    }
+
+    .input-group label{
+        font-size:14px;
+    }
+
+    .input-box input{
+        font-size:13px;
+    }
+
+    .btn-login,
+    .btn-google{
+        font-size:14px;
+    }
+
+    .footer-bottom p{
+        font-size:12px;
+    }
 }
